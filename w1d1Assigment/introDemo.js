@@ -11,4 +11,4 @@ console.log(x+y+z);
 console.log(z+y);
 console.log(x+z);
 console.log(x+z+y);
-console.log(x+z*y);
+console.log(x+z+y);
