@@ -32,3 +32,13 @@ switch(person){
         console.log('Loan duration in weeks is= 2');
         break;
 }
+/* Status                 Number of books Overdue             Loan duration in weeks
+   Student                          0                                   6
+                             fewer than 3                               4
+                               3 or more                                2
+  Faculty                         0                                     12
+                             fewer than 3                               10
+                              3 or more                                 8
+ Other                            0                                     4
+                              fewer than 3 3
+                              3 or more                                 2*/   

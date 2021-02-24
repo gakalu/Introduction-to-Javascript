@@ -19,3 +19,7 @@ if(age>=13){
     console.log('The bed time is=9:30');   
 }
 }
+/* Weather       Footwear
+    hot          sandals
+    rain         galoshes
+    snow         boots*/
