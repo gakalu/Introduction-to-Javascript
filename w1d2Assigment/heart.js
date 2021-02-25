@@ -1,5 +1,5 @@
 //w1d2 Q5
-let prompt=require('prompt-sync')();
+let prompt=require('prompt-sync')( );
 let n =prompt('enter your age:' );
 let age=parseInt(n);
 let maximum=220-age;

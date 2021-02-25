@@ -11,5 +11,5 @@ let result=(Eodometer-Bodometer)/gas;
  if(result>=0){
      console.log('The output is='+result.toFixed(2)+' miles/gallon');
  }else{
-     console.log('Error');
+     console.log('Error ');
  }

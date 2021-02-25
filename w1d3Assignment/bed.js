@@ -19,7 +19,10 @@ if(age>=13){
     console.log('The bed time is=9:30');   
 }
 }
-/* Weather       Footwear
-    hot          sandals
-    rain         galoshes
-    snow         boots*/
+/*Age                               Season Bed                                  Time
+5 or younger                      summer, fall                                 8:30 PM
+                                 winter, spring                                8:00 PM
+6 to 12                           summer                                       9:30 PM
+                                 winter, spring, fall                          8:30 PM
+13 and older                      summer                                       10:30 PM
+                                 winter, spring, fall                          9:30 PM*/
