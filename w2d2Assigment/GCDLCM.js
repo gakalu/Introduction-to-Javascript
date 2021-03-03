@@ -1,4 +1,4 @@
-
+//w2d2 Q4
 let greatestCommonDivisor=function(num1,num2){
   let temp=0;
   if(num2>num1){
