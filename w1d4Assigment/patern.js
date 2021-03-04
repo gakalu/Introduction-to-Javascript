@@ -3,8 +3,7 @@ let k1,k2,k3;
 for(let i=5;i>=1;i--){
     k1='';
     for(let j=i;j>=1;j--){
-        c
-        k1+=i+"";
+        k1+=i;
     }
     console.log(k1);
 } 

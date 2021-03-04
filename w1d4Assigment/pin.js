@@ -8,7 +8,7 @@ while(true){
     console.log('===============================================================');
     break;
     }else{
-    let temp;
+  let temp;
 while(true){
     temp=prompt('Incorrect, try again:');
     console.log('==============================================================');

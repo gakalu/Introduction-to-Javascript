@@ -23,7 +23,8 @@ console.log('Greatest Common Divisor of '+ a+' and '+b+' is='+greatestCommonDivi
 console.log('===========================================================================');
 //w2d2 Q5
 let leastCommonMultiple=function (n, m) {
-    if (n === m) return n;
+    if (n === m) 
+    return n;
     if (m > n) {
      let temp = m; 
      m = n; 
