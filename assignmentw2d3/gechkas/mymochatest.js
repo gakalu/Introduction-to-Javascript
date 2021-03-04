@@ -17,24 +17,24 @@
         
             it("the area of the circle if", function() {
     
-            assert.equal(living(2, 3,3), 18);
-            assert.equal(living(3, 4,5), 81);
+            assert.equal(circle(1), 3.14);
+            assert.equal(circle(2), 81);
     
             })});
             describe("house", function() {
         
                 it("the volume of the house if", function() {
         
-                assert.equal(living(2, 3,3), 18);
-                assert.equal(living(3, 4,5), 81);
+                assert.equal(house(2, 3,3,2), 36);
+                assert.equal(house(3, 4,5), 81);
         
                 })});
                 describe(" total", function() {
         
                     it("the total volum if", function() {
             
-                    assert.equal(living(2, 3,3), 18);
-                    assert.equal(living(3, 4,5), 81);
+                    assert.equal(total(2, 3,3,2), 38);
+                    assert.equal(total(3, 4,5), 81);
             
                     })});
                     
