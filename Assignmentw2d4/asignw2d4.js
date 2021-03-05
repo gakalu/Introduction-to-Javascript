@@ -101,17 +101,3 @@ for(let i=0;i<2;i++){
 return sum;
 }
 console.log(materix([[0,1,2],[9,8,7]],[[6,5,4],[3,4,5]]));
-//ClassExercise On array method
-let name=[2,5,7,8,9,7,56,54,4];
-console.log(name.splice(3,7));
-console.log(result);
-function mult(matrix){
-    let sum=0;
-    for(let i=0;i<matrix.length;i++){
-        for(let j=0;j<matrix[i].length;j++){
-            sum+=matrix[i][j];
-        }
-    }
-    return sum;
-}
-console.log(mult([[1,2,3],[4,5,6],[7,8,9]]));
