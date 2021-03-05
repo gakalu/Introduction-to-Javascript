@@ -26,18 +26,18 @@
         })});
     describe("rotateright", function() {
         
-            it("rotateright", function() {
+        it("rotateright", function() {
             
-            assert.equal(rotate2([4,6,8,5,3,9]),[6,8,5,3,9,4]);
-            assert.equal(rotate2([4,6,8,5,3,9]), [5,7,8,9,4,3]);
+        assert.equal(rotate2([4,6,8,5,3,9]),[6,8,5,3,9,4]);
+        assert.equal(rotate2([4,6,8,5,3,9]), [5,7,8,9,4,3]);
             
             })});
     describe("array", function() {
         
-            it("array", function() {
+        it("array", function() {
                 
-            assert.equal(array([4,6,8,5,3,9]),[6,8,5,3,9,4]);
-            assert.equal(array([4,6,8,5,3,9]), [5,7,8,9,4,3]);
+        assert.equal(array([4,6,8,5,3,9]),[6,8,5,3,9,4]);
+        assert.equal(array([4,6,8,5,3,9]), [5,7,8,9,4,3]);
                 
             })});
     describe("filterRange", function() {
