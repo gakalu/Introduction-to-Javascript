@@ -4,10 +4,10 @@
         
         it("sum", function() {
 
-        assert.equal(addend([2,4,6,7,4,8]), 11);
-        assert.equal(addend([2,4,6,7,4,8]), 16);
+        assert.equal(addend(2,4,6,7,4,8), 11);
+        assert.equal(addend(2,4,6,7,4,8), 16);
 
-        })});
+        })})
     describe("getMiddle", function() {
         
         it("getMiddle", function() {

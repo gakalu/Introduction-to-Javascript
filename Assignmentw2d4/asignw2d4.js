@@ -33,20 +33,19 @@ function rotateright(arr){
     return arr;
     }
     console.log(rotateright([4,6,8,5,3,9]));
-//w2d4 Q6
-function array(arr){
+// //w2d4 Q6
 let prompt=require('prompt-sync')();
-arr=[];
-while(true){
-let num=prompt('Enter the number:');
-if(num!=='stop'){
-arr.push(Number(num));
-}else{
-    break;
+let input=prompt('Enter the value: ')
+let myArr= input.split(',');
+let negativeArr=[];
+for(let i=0;i<myArr.length;i++){
+let value=myArr[i];
+if(value<0){
+    negativeArr.push(+value);
 }
 }
-}
-console.log(array(arr));
+console.log(negativeArr);
+
 //w2d4 Q7
 function filterRange(arr, a, b){
     let newArr=[arr.length];
@@ -63,18 +62,21 @@ return newArr
 console.log(filterRange([2,6,3,8,4,5,9,2,7,8],3,9));
 //w2d4 Q8
 function  palindrome(arr){
-    let value;
-    let k;
-    newArr=[];
-for(let i=arr.length-1;i>=0;i--){
-    newArr[k]=arr[i];
-    k++;
-}
-   value=Compare(arr,newArr);
-   if(value==true)
-   return newArr;
-}
-console.log(palindrome('Getachew'));
+    let plarr=arr.split('');
+    let revarr=[];
+    for(let i=arr.length-1;i>=0;i--){
+    revarr.push(plarr[i])
+    }
+    for(let i=0;i<arr.length;i++){
+       if(plarr[i]!==revarr[i]){
+       return '';
+    }
+       else{
+       return arr;
+       }
+    }
+    }
+    console.log(palindrome('apapa'));
 //w2d4 Q9
 function materix(arr1,arr2){
 let sum=[[],[]];
@@ -82,7 +84,7 @@ let sum=[[],[]];
  arr2=[[6,5,4],[3,4,5]];
 for(let i=0;i<2;i++){
     for(let j=0;j<3;j++){
-        sum[i][j]=(arr1[i][j]+arr2[i][j]);
+    sum[i][j]=(arr1[i][j]+arr2[i][j]);
 }
 }
  return sum;
