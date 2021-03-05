@@ -1,68 +1,101 @@
 "use strict";
+const assert = require("assert");
+const arrays = require("../asignw2d4");
+const matrixAddition = require("../asignw2d4").matrixAddition;
 
-    describe("addend", function() {
-        
-        it("sum", function() {
 
-        assert.equal(addend(2,4,6,7,4,8), 11);
-        assert.equal(addend(2,4,6,7,4,8), 16);
 
-        })})
-    describe("getMiddle", function() {
-        
-        it("getMiddle", function() {
-    
-        assert.equal(getMiddle([2,4,6,2,4,50,80],2));
-        assert.equal(getMiddle([2,4,6,2,4,50,80],4));
-    
-        })});
-    describe("rotateleft", function() {
-        
-        it("rotateleft", function() {
-        
-        assert.equal(rotate1([4,6,8,5,3,9]),[6,8,5,3,9,4]);
-        assert.equal(rotate1([4,6,8,5,3,9]), [5,7,8,9,4,3]);
-        
-        })});
-    describe("rotateright", function() {
-        
-        it("rotateright", function() {
-            
-        assert.equal(rotate2([4,6,8,5,3,9]),[6,8,5,3,9,4]);
-        assert.equal(rotate2([4,6,8,5,3,9]), [5,7,8,9,4,3]);
-            
-            })});
-    describe("array", function() {
-        
-        it("array", function() {
-                
-        assert.equal(array([4,6,8,5,3,9]),[6,8,5,3,9,4]);
-        assert.equal(array([4,6,8,5,3,9]), [5,7,8,9,4,3]);
-                
-            })});
-    describe("filterRange", function() {
-        
-        it("filterRange", function() {
-            
-        assert.equal(filterRange([2,6,3,8,4,5,9,2,7,8],3,6), [3,4,5,6]);
-        assert.equal(filterRange([2,6,3,8,4,5,9,2,7,8],3,6), [3,8,5,6]);
-            
-        })});
-    describe("palindrome", function() {
-        
-        it("palindrome", function() {
-                
-        assert.equal(palindrome('Getachew'),'');
-        assert.equal(palindrome('wow'), 'wow');
-                
-        })});
-    describe("materix", function() {
-                
-        it("materix", function() {
-                    
-        assert.equal(materix(([[0,1,2],[9,8,7]], [[6,5,4],[3,4,5]]),[[6,6,6],[12,12,12]]));
-        assert.equal(materix(([[0,1,2],[9,8,7]], [[6,5,4],[3,4,5]]),[[12,6,6],[12,12,12]]));
-                    
-        })});
-                            
-                    
+/* 1.	Write a function addend(arr) that accepts an array of numbers as parameters and returns the sum of first and last elements of the array. */
+describe("addend", function () {
+
+    it("tests addend even number of elements", function () {
+        assert.strictEqual(arrays.addends([-1, -100, 1, 2, 3, -55]), -56);
+    });
+    it("tests addend odd number of elements", function () {
+        assert.strictEqual(arrays.addends([-10, 2, 3, 4, 20]), 10);
+    });
+
+});
+
+/* 2.	Write a function named getMiddle that returns the value of the middle element in an array. If 
+the array has an even number of elements, then this function must return the average of the two middle elements. */
+describe("getMiddle", function () {
+
+    it("tests getMiddle even number of elements", function () {
+        assert.strictEqual(arrays.getMiddle([-1, -100, 1, 2, 3, -55]), 1.5);
+    });
+    it("tests getMiddle odd number of elements", function () {
+        assert.strictEqual(arrays.getMiddle([-10, 2, 3, 4, 20]), 3);
+    });
+
+});
+
+/* 3.	Write a function to rotate the elements in an array to the left by 1. */
+describe("rotateLeft", function () {
+
+    it("tests rotateLeft even number of elements", function () {
+        assert.deepStrictEqual(arrays.rotateLeft([-1, -100, 1, 2, 3, -55]), [-100, 1, 2, 3, -55, -1]);
+    });
+    it("tests rotateLeft odd number of elements", function () {
+        assert.deepStrictEqual(arrays.rotateLeft([-10, 2, 3, 4, 20]), [2, 3, 4, 20, -10]);
+    });
+
+});
+
+/* 4.	Write a function to rotate the elements in an array to the right by 1. */
+describe("rotateRight", function () {
+
+    it("tests rotateRight even number of elements", function () {
+        assert.deepStrictEqual(arrays.rotateRight([-1, -100, 1, 2, 3, -55]), [-55, -1, -100, 1, 2, 3]);
+    });
+    it("tests rotateRight odd number of elements", function () {
+        assert.deepStrictEqual(arrays.rotateRight([-10, 2, 3, 4, 20]), [20, -10, 2, 3, 4]);
+    });
+
+});
+
+/* 5.	Modify each rotate function to rotate array by n times where, n is the second parameter passed in the function (EC). n < number of elements */
+describe("rotateNRight", function () {
+
+    it("tests rotateNRight 3", function () {
+        assert.deepStrictEqual(arrays.rotateNRight([-1, -100, 1, 2, 3, -55], 3), [2, 3, -55, -1, -100, 1, 2]);
+    });
+    it("tests rotateNRight 4", function () {
+        assert.deepStrictEqual(arrays.rotateNRight([-10, 2, 3, 4, 20], 4), [2, 3, 4, 20, -10]);
+    });
+
+});
+
+/* 6.	Write a JavaScript function that takes a string of  numbers as comma separated values, e.g, â€œ32, 105,  -22â€,  and stores it into an array, e.g., [32, 105, -22] and do following operations
+a.	Filters out negative values
+b.	Maps the filtered elements to sum of its digits
+c.	Reduce to get sum of all the elements and returns this value
+*/
+describe("Filters out negative values", function () {
+    it("tests 32, 105,  -22 ", function () {
+        assert.strictEqual(arrays.fmrString("32, 105,  -22"), (-22));
+    });
+});
+
+/* 7.	Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array. */
+describe("filterRange", function () {
+    it("tests [0, 100, 3, 6, -555], 6, 60",  function () {
+        assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 60), [100, 6]);
+    });
+});
+
+/* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
+describe("filterPalindromes", function () {
+    it("tests [not, a, kayak, eagle, racecar]",   function () {
+        assert.strictDeepEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), [ "a", "kayak", "racecar"]);
+    });
+});
+
+//* 9. Do matrix addition and return result on matrix format for following:
+describe("Matrix", function () {
+    describe("matrixAddition", function () {
+        it("matrix addition of [[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ] ]", function () {
+            assert.deepStrictEqual(matrixAddition([[0, 1, 2], [9, 8, 7]], [[6, 5, 4], [3, 4, 5]]), [[6, 6, 6], [12, 12, 12]]);
+        });
+    });
+});
