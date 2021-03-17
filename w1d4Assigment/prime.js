@@ -19,9 +19,8 @@ let x=parseInt(n);//Q b
 for(let k=2;k<x;k++){
     if(x%k==0){
     console.log(x+' is not prime');
-        break;
-    }else if(x!=k&&x>k){
-    console.log(x+' is not prime');
+    }else{
+    console.log(x+' is prime');
     }     
     }   
      

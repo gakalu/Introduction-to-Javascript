@@ -1,16 +1,14 @@
-"use strict";
-
 exports.isArrayEqual = isArrayEqual;
-exports.isPalindrome= isPalindrome;
-exports.reverse2String= reverse2String;
+exports.checkspalindrome= checkspalindrome;
+exports.transform= transform;
 exports.enhancedIncludes=enhancedIncludes;
-exports.ssReverse = ssReverse;
-exports.merge = merge;
+exports.reversedcopy = reversedcopy;
+exports.mergeArray = mergeArray;
 
 //W2D5 Q1
 function isArrayEqual(arr1,arr2){
-    let n=Math.max(arr1.length,arr2.length);
-    for(let i=0;i<n;i++){
+    
+    for(let i=0;i<arr1.length;i++){
         if(arr1[i]!==arr2[i]){
             return false;
         }  
@@ -21,7 +19,7 @@ console.log('Q1 =============check equality of an array=========');
 console.log(isArrayEqual([2,3,4],[2,3,8]));
 
 //w2d5 Q2
-function isPalindrome(arr3){
+function checkspalindrome(arr3){
     let revarr=[];
     for(let i=0;i<arr3.length;i++){
     revarr.push(arr3[(arr3.length-1)-i]);
@@ -33,17 +31,17 @@ function isPalindrome(arr3){
 }
 let arr3=[5,3,5,3]
 console.log('Q2 =============check for palandrom=========');
-console.log(isPalindrome(arr3));
+console.log(checkspalindrome(arr3));
 
 //w2d5 Q3
-function reverse2String(arr2){
+function transform(arr2){
 
     let text=arr2.reverse();
     let final=text.join("_")
     return final;
 }
 console.log('Q3 =============teansform to given format======');
-console.log(reverse2String(['Hi','Myname','is','Akalu']));
+console.log(transform(['Hi','Myname','is','Akalu']));
 
 //w2d5 Q4
 function enhancedIncludes(arr1,value){
@@ -73,7 +71,7 @@ console.log('Q4 =============check for inclusive=========');
 console.log(enhancedIncludes(v1, v2));
 
 //w2d5 Q5
-function ssReverse(arr){
+function reversedcopy(arr){
     let newArr=[];
     for(let i=0;i<arr.length;i++){
     let element=+arr.slice(arr.length-(i+1),arr.length-i);
@@ -83,12 +81,12 @@ function ssReverse(arr){
 }
 let arr=[1,2,3,4];
 console.log('Q5 =============The reversed array================');
-console.log(ssReverse(arr));
+console.log(reversedcopy(arr));
 console.log('Q5=============The orginal array=================');
 console.log(arr);
 
 //w2d5 Q6
-function merge(arr1, arr2) {
+function mergeArray(arr1, arr2) {
     let n=arr1.length+arr2.length;
     for (let i=arr1.length; i<n;i++) {
     arr1.push(arr2.shift());
@@ -108,7 +106,7 @@ function merge(arr1, arr2) {
     }
     return arr;
    }
-   let arr4= [1,3,8];
-   let arr2 = [0,5,9];
+   let arr4= [1,9,5];
+   let arr2 = [6, 8];
    console.log('Q6 =============marging of an array=========');
-   console.log(merge(arr4, arr2));
+   console.log(mergeArray(arr4, arr2));
